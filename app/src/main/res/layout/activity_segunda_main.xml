@@ -15,7 +15,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:text="@string/cero" />
 
         <TextView
@@ -35,7 +35,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:text="@string/cero" />
 
         <TextView
