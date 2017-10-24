@@ -50,8 +50,8 @@ public class SegundaMainActivity extends AppCompatActivity implements View.OnCli
             }
         } catch (Exception e) {
 
-            Toast.makeText(this, "Error al introducir datos", Toast.LENGTH_SHORT).show();
-            //Snackbar.make(layout, "Error al introducir datos", Snackbar.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Error al introducir datos", Toast.LENGTH_SHORT).show();
+            Snackbar.make(layout, "Error al introducir datos", Snackbar.LENGTH_SHORT).show();
         }
     }
 
