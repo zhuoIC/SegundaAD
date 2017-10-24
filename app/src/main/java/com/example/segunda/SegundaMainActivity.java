@@ -12,14 +12,19 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+/**
+ * Esta clase permite realizar el cambio de dólar a euros y viceversa
+ * @author Nicolás Hernández Jiménez
+ */
+
 public class SegundaMainActivity extends AppCompatActivity implements View.OnClickListener {
-    final double getCambio = 1.17955;
+
+    final static double getCambio = 1.17955;
     EditText etxE;
     EditText etxD;
     Button btnConvertir;
     RadioButton rbtEaD;
     ViewGroup layout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +44,7 @@ public class SegundaMainActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
+    // Realiza el cambio a dólares/euros y lo muestra con dos decimales
     public void actualizar() {
         double valor = 0;
         try {
@@ -49,8 +55,8 @@ public class SegundaMainActivity extends AppCompatActivity implements View.OnCli
                 etxE.setText(String.format("%.2f", Double.parseDouble(etxD.getText().toString()) / getCambio));
             }
         } catch (Exception e) {
-
             //Toast.makeText(this, "Error al introducir datos", Toast.LENGTH_SHORT).show();
+            // Muestra en una barra inferior el mensaje de error
             Snackbar.make(layout, "Error al introducir datos", Snackbar.LENGTH_SHORT).show();
         }
     }
